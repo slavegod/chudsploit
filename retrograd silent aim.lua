@@ -3,6 +3,10 @@ local local_player = players_service.LocalPlayer
 local camera = workspace.CurrentCamera
 local part
 
+if not game:GetService("ReplicatedFirst"):FindFirstChildOfClass("Actor"):FindFirstChildOfClass("LocalScript") then
+    local_player:Kick("disable the anticheat first.")
+end
+
 local wallbang = true
 
 local env = getrenv()
